@@ -1,10 +1,6 @@
 const STORAGE_KEY = "theme";
 const THUMB_TRAVEL_PX = 20;
 
-function getStoredTheme() {
-  return localStorage.getItem(STORAGE_KEY);
-}
-
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
 }
@@ -21,13 +17,6 @@ function positionThumb(thumb, theme, animate, reducedMotion) {
 
 export function initTheme(reducedMotion) {
   const toggle = document.querySelector("[data-theme-toggle]");
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
-
-  media.addEventListener("change", (e) => {
-    if (!getStoredTheme()) {
-      applyTheme(e.matches ? "dark" : "light");
-    }
-  });
 
   if (!toggle) return;
 
