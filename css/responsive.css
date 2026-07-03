@@ -1,0 +1,118 @@
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-left: 0;
+  }
+
+  .hero-name {
+    font-size: clamp(26px, 8vw, 44px);
+  }
+
+  .hero-tagline {
+    justify-content: center;
+  }
+
+  .hero-tagline__sizer {
+    display: none;
+  }
+
+  .hero-tagline__anim {
+    position: static;
+    white-space: normal;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .hero-tagline__text {
+    white-space: normal;
+  }
+
+  .hero-photo-collage {
+    max-width: 320px;
+  }
+
+  .hero-illustration {
+    max-width: 448px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-hang {
+    height: auto;
+    min-height: 320px;
+  }
+
+  .about-bio-wrap {
+    align-items: center;
+  }
+
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(78vw, 320px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-6);
+    padding: var(--space-7) var(--space-6);
+    background: var(--nav-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-left: 1px solid var(--nav-border);
+    transform: translateX(100%);
+    transition: transform var(--transition-medium) var(--ease-liquid);
+    z-index: 200;
+  }
+
+  .nav-links[data-open="true"] {
+    transform: translateX(0);
+  }
+
+  .nav-hamburger {
+    display: inline-flex;
+  }
+
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-medium) var(--ease-liquid);
+    z-index: 150;
+  }
+
+  .nav-overlay[data-open="true"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .stats-bar {
+    gap: var(--space-5) var(--space-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-bar {
+    grid-template-columns: 1fr;
+  }
+}

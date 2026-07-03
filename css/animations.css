@@ -1,0 +1,25 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.hover-lift {
+  transition: transform var(--transition-fast) var(--ease-liquid);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

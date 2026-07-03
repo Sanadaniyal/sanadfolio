@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sanad Daniyal — Product Designer</title>
+<meta name="description" content="Sanad Daniyal — Product Designer bridging technology and human needs." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+<script>
+  (function () {
+    var stored = localStorage.getItem("theme");
+    var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Audiowide&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/tokens.css?v=34" />
+<link rel="stylesheet" href="css/base.css?v=34" />
+<link rel="stylesheet" href="css/layout.css?v=34" />
+<link rel="stylesheet" href="css/components.css?v=34" />
+<link rel="stylesheet" href="css/animations.css?v=34" />
+<link rel="stylesheet" href="css/responsive.css?v=34" />
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body>
+  <canvas id="ripple-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="nav-pill" aria-label="Primary">
+      <a href="#home" class="nav-home">SD</a>
+
+      <div class="nav-links" data-nav-links>
+        <button
+          class="theme-toggle"
+          data-theme-toggle
+          role="switch"
+          aria-checked="false"
+          aria-label="Toggle dark mode"
+        >
+          <span class="theme-toggle__thumb" data-theme-thumb>
+            <span class="theme-toggle__thumb-icon" data-theme-thumb-icon>
+              <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </span>
+        </button>
+
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="assets/resume/resume-placeholder.pdf" target="_blank" rel="noopener" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <button class="nav-hamburger" data-nav-hamburger aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </nav>
+    <div class="nav-overlay" data-nav-overlay></div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container container--wide hero-grid">
+        <div class="hero-content">
+          <p class="hero-eyebrow reveal">Hi! I'm</p>
+          <h1 class="hero-name reveal">Sanad Daniyal</h1>
+          <div class="hero-tagline reveal" data-hero-tagline></div>
+          <a href="#work" class="btn btn-secondary"><span class="btn-outline__label">My Work</span></a>
+        </div>
+
+        <div class="hero-illustration reveal">
+          <svg class="hero-loop hero-loop--back" viewBox="0 0 440 440" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="heroLoopGrad1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" style="stop-color: var(--accent-1);" />
+                <stop offset="50%" style="stop-color: var(--accent-2);" />
+                <stop offset="100%" style="stop-color: var(--accent-3);" />
+              </linearGradient>
+              <linearGradient id="heroLoopGrad2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0%" style="stop-color: var(--accent-3);" />
+                <stop offset="50%" style="stop-color: var(--accent-2);" />
+                <stop offset="100%" style="stop-color: var(--accent-1);" />
+              </linearGradient>
+            </defs>
+            <path class="hero-loop__path" d="M 35.0,176.0 A 185.0,55.0 0 0 1 405.0,176.0" stroke="url(#heroLoopGrad1)" stroke-width="2" stroke-opacity="0.45" stroke-dasharray="1 11" stroke-linecap="round" />
+            <path class="hero-loop__path" d="M 55.0,182.0 A 165.0,63.0 0 0 1 385.0,182.0" stroke="url(#heroLoopGrad2)" stroke-width="2" stroke-opacity="0.45" stroke-dasharray="1 11" stroke-linecap="round" />
+          </svg>
+
+          <div class="hero-photo-frame">
+            <img src="assets/images/hero/my-photo-illustration.png" alt="Sanad Daniyal" class="hero-photo-main" />
+          </div>
+
+          <svg class="hero-loop hero-loop--front" viewBox="0 0 440 440" fill="none" aria-hidden="true">
+            <path class="hero-loop__path" d="M 35.0,176.0 A 185.0,55.0 0 0 0 405.0,176.0" stroke="url(#heroLoopGrad1)" stroke-width="2" stroke-opacity="0.45" stroke-dasharray="1 11" stroke-linecap="round" />
+            <path class="hero-loop__path" d="M 55.0,182.0 A 165.0,63.0 0 0 0 385.0,182.0" stroke="url(#heroLoopGrad2)" stroke-width="2" stroke-opacity="0.45" stroke-dasharray="1 11" stroke-linecap="round" />
+          </svg>
+
+          <div class="hero-icon-badge hero-icon-badge--figma" style="animation-delay: 0s;">
+            <img src="assets/images/hero/figma-icon.png" alt="" aria-hidden="true" />
+          </div>
+
+          <div class="hero-icon-badge hero-icon-badge--computer" style="animation-delay: -3s;">
+            <img src="assets/images/hero/computer-icon.png" alt="" aria-hidden="true" />
+          </div>
+
+          <div class="hero-icon-badge hero-icon-badge--contract" style="animation-delay: -6s;">
+            <img src="assets/images/hero/contract-icon.png" alt="" aria-hidden="true" />
+          </div>
+
+          <div class="hero-icon-badge hero-icon-badge--ai" style="animation-delay: -9s;">
+            <img src="assets/images/hero/ai-icon.png" alt="" aria-hidden="true" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-bar glass reveal">
+          <div class="stat-item">
+            <span class="stat-value" data-count-to="50000" data-suffix="+">50,000+</span>
+            <span class="stat-label">Organizations</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count-to="28" data-suffix="%">28%</span>
+            <span class="stat-label">YoY ARR Growth</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count-to="500" data-suffix="+">500+</span>
+            <span class="stat-label">Global Enterprises</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count-to="3" data-suffix="M+">3M+</span>
+            <span class="stat-label">Managed Devices</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count-to="89" data-suffix="%">89%</span>
+            <span class="stat-label">Reduction in Manual Effort</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count-to="54" data-suffix="%">54%</span>
+            <span class="stat-label">Faster Issue Resolution</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count-to="41" data-suffix="%">41%</span>
+            <span class="stat-label">Fewer Support Tickets</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count-to="35" data-suffix="%">35%</span>
+            <span class="stat-label">Higher User Engagement</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <h2 class="section-heading reveal">🎨 My Work</h2>
+        <div class="work-grid" data-work-grid></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-heading reveal">👋 About Me</h2>
+        <div class="about-grid">
+          <div class="about-hang reveal">
+            <svg class="about-hang__line" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="aboutLineGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" style="stop-color: var(--accent-1);" />
+                  <stop offset="50%" style="stop-color: var(--accent-2);" />
+                  <stop offset="100%" style="stop-color: var(--accent-3);" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M 30 7.5 C 50 18 58 25 62 35 C 66 45 20 52 22 62.5 C 24 73 68 80 62 90"
+                stroke="url(#aboutLineGrad)"
+                stroke-opacity="0.5"
+                stroke-width="2"
+                stroke-dasharray="1 10"
+                stroke-linecap="round"
+                vector-effect="non-scaling-stroke"
+              />
+            </svg>
+
+            <div class="about-hang__item about-hang__item--portrait">
+              <svg class="about-hang__hook" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+                <circle cx="10" cy="4" r="3" fill="currentColor" />
+                <path d="M10 7 v5 a5 5 0 1 0 5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+              </svg>
+              <div class="about-hang__frame">
+                <img src="assets/images/About/about-portrait.jpg" alt="Sanad Daniyal working on his laptop" loading="lazy" />
+              </div>
+            </div>
+            <div class="about-hang__item about-hang__item--team">
+              <svg class="about-hang__hook" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+                <circle cx="10" cy="4" r="3" fill="currentColor" />
+                <path d="M10 7 v5 a5 5 0 1 0 5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+              </svg>
+              <div class="about-hang__frame">
+                <img src="assets/images/About/about-team.jpg" alt="Sanad collaborating with his design team" loading="lazy" />
+              </div>
+            </div>
+            <div class="about-hang__item about-hang__item--conference">
+              <svg class="about-hang__hook" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+                <circle cx="10" cy="4" r="3" fill="currentColor" />
+                <path d="M10 7 v5 a5 5 0 1 0 5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+              </svg>
+              <div class="about-hang__frame">
+                <img src="assets/images/About/about-conference.jpg" alt="Sanad with colleagues at a company conference" loading="lazy" />
+              </div>
+            </div>
+            <div class="about-hang__item about-hang__item--ride">
+              <svg class="about-hang__hook" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+                <circle cx="10" cy="4" r="3" fill="currentColor" />
+                <path d="M10 7 v5 a5 5 0 1 0 5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+              </svg>
+              <div class="about-hang__frame">
+                <img src="assets/images/About/about-ride.jpg" alt="Sanad on a motorcycle ride" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <div class="about-bio-wrap reveal">
+            <p class="about-bio">
+              Design and code have never been two separate worlds for me. They're one continuous thread 🧵 I've been pulling on for 9 years, the last 6+ spent designing intuitive, user-friendly, beautiful, business-forward products across both B2B and B2C, spanning enterprise networking &amp; security, fintech &amp; digital banking, sales &amp; talent intelligence, e-commerce, and healthcare. Along the way I've helped cut manual admin effort by 90% through AI-driven UX, driven 2.2x platform growth serving 99M+ users, and helped grow SaaS ARR to $207.6M (+24% YoY) 📈 across 130+ global enterprise clients.
+              <br /><br />
+              My superpower is the seam between design and engineering. I speak both fluently, so what I hand off actually ships, and what ships actually works. I lean on AI heavily in my process too, from research synthesis to vibe-coding functional prototypes myself before handoff, so ideas get tested in hours, not sprints. ⚡
+              <br /><br />
+              My taste runs minimal. My process runs deep: hands-on across research, IA, design systems, prototyping, and testing, with real empathy for the user at every step. The goal is always the same: the easiest possible experience for the person using it, and a measurable win for the business paying for it.
+              <br /><br />
+              Off-screen: painting 🎨, mentoring, philosophy, travel ✈️, gymming 💪, and event decor 🎉. Different canvases, same obsession with making things feel right.
+              <br /><br />
+              🎓 B.Tech in Computer Science. Certified in both UI/UX Design and Full-Stack Software Development.
+            </p>
+            <a href="about.html" class="btn btn-secondary"><span class="btn-outline__label">More</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container container--wide">
+        <h2 class="section-heading reveal">💬 Testimonials</h2>
+        <div class="testimonials-marquee" data-testimonials-marquee>
+          <div class="testimonials-grid" data-testimonials-grid></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-heading reveal">🤝 Let's Connect</h2>
+
+        <div class="contact-links reveal">
+          <div class="contact-link glass">
+            <span class="contact-link__label">Phone</span>
+            <div class="contact-link__row">
+              <a href="tel:+918130449263" class="contact-link__value">+91-8130449263</a>
+              <button
+                class="copy-btn"
+                data-copy="+918130449263"
+                aria-label="Copy phone number"
+              >
+                <svg class="icon-copy" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M6 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V6" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+                <svg class="icon-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12.5l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="contact-link glass">
+            <span class="contact-link__label">Email</span>
+            <div class="contact-link__row">
+              <a href="mailto:sanad.daniyal@gmail.com" class="contact-link__value">sanad.daniyal@gmail.com</a>
+              <button
+                class="copy-btn"
+                data-copy="sanad.daniyal@gmail.com"
+                aria-label="Copy email address"
+              >
+                <svg class="icon-copy" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M6 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V6" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+                <svg class="icon-check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12.5l5 5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- TODO(sanad): replace with your real LinkedIn profile URL -->
+          <a href="https://www.linkedin.com/in/REPLACE_ME" target="_blank" rel="noopener" class="contact-link glass">
+            <span class="contact-link__label">LinkedIn</span>
+            <div class="contact-link__row">
+              <strong class="contact-link__value">Connect ↗</strong>
+            </div>
+          </a>
+          <a href="assets/resume/resume-placeholder.pdf" target="_blank" rel="noopener" class="contact-link glass">
+            <span class="contact-link__label">Resume</span>
+            <div class="contact-link__row">
+              <strong class="contact-link__value">View ↗</strong>
+            </div>
+          </a>
+        </div>
+
+        <div class="connect-cta reveal">
+          <button
+            class="btn btn-primary"
+            data-connect-toggle
+            aria-expanded="false"
+            aria-controls="contact-form-wrap"
+          >
+            <span class="btn-outline__label">Send a Message</span>
+          </button>
+        </div>
+
+        <div id="contact-form-wrap" class="contact-form-wrap glass" data-contact-form-wrap hidden>
+          <!-- TODO(sanad): replace REPLACE_WITH_FORM_ID with your real Formspree form ID -->
+          <form data-contact-form action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="form-field">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="name" type="text" required />
+            </div>
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" required />
+            </div>
+            <div class="form-field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-contact-submit disabled>Send</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">&copy; 2026 Sanad Daniyal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
